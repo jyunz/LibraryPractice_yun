@@ -16,6 +16,6 @@ class MainActivity : AppCompatActivity() {
 //        프로필 크게 보는 액티비티로 이동.
         val myIntent = Intent(this, ViewProfilePhotoActivity::class.java)
         startActivity(myIntent)
-
+//      커밋이 안되어서 확인차
         }
 }
