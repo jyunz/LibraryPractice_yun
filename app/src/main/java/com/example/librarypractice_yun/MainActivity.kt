@@ -23,5 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         Glide.with(this).load("https://shop-phinf.pstatic.net/20201119_124/1605760157688n7oYn_PNG/3537848473_Hv5dt9nX_c908276496beb058d373b6c527206ce7608aa013.png?type=w336").into(classImg)
 
+//        전화걸기 버튼을 누르면 권한 확인 / 전화연결
+
+        callBtn.setOnClickListener {
+
+//            라이브러리 활용 -> 전화 권한 확인 -> 실제 전화 연결
+
+        }
     }
 }
