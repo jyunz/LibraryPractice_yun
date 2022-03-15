@@ -1,5 +1,6 @@
 package com.example.librarypractice_yun
 
+import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -50,10 +51,14 @@ class MainActivity : AppCompatActivity() {
 //                    권한 거절시 -> 토스트로 권한이 없어서 전화연결 실패 했다는 메세지 띄움
                     Toast.makeText(this@MainActivity,"권한이 없어서 전화 연결에 실패 했습니다.", Toast.LENGTH_SHORT).show()
                 }
-
-
             }
 
+//             실제로 권한을 가지고 있는가..강의는 Tedpermission.with인데 버전이 달라 create()로 바뀜
+            TedPermission.create()
+                .setPermissionListener(permissionListener)
+                .setDeniedMessage("전화 연결 권한이 필요합니다. [설정] 에서 진행해주세요.")
+                .setPermissions(Manifest.permission.CALL_PHONE)
+                .check()
         }
     }
 }
